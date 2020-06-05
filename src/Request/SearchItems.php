@@ -70,6 +70,19 @@ class SearchItems extends BaseItems
     }
 
     /**
+     * Alias to searchIndex
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function category(string $value)
+    {
+        $this->request()->setSearchIndex($value);
+
+        return $this;
+    }
+
+    /**
      * Alias to itemCount
      *
      * @param int $value
