@@ -1,0 +1,44 @@
+{
+    "name": "codewizz/laravel-amazon-product-query",
+    "version": "1.0.0",
+    "description": "Amazon ProductAdvertisingAPI (PAAPI) for Laravel",
+    "keywords": [
+        "laravel",
+        "amazon",
+        "product",
+        "pa-api",
+        "paapi",
+        "paapi5.0",
+        "paapi5",
+        "paapi5-php-sdk",
+        "ProductAdvertisingAPI"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CodeWizz",
+            "email": "info@codewizz.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/support": "^6.0||^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeWizz\\Amazon\\ProductAdvertising\\": "src/",
+            "Amazon\\ProductAdvertisingAPI\\v1\\": "paapi5-php-sdk/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeWizz\\Amazon\\ProductAdvertising\\AmazonProductServiceProvider"
+            ],
+            "aliases": {
+                "AmazonProduct": "CodeWizz\\Amazon\\ProductAdvertising\\AmazonProductFacade"
+            }
+        }
+    }
+}
